@@ -28,3 +28,21 @@
 .board .type a{
   color: #eee;
 }
+
+.topbar {
+  float:right;
+}
+
+.loading {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Tahoma, Arial;
+  padding: 5px 20px;
+  letter-spacing: 1px;
+  color: #FFF;
+  background-color: #2ba6cb;
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+
+}

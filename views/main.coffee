@@ -1,5 +1,7 @@
 render_board = (board) -> 
   return false if board.name != 'Bernard' && board.name != 'Project P'
+  $('.loading').show()
+  console.time board.id
   new_board_container = $('<div class="six columns board"></div>')
   new_board = $('<div class="panel"/>')
   new_name = $('<h4></h4>')
@@ -26,9 +28,10 @@ render_board = (board) ->
         new_board.append '<span class="timestamp">'+ timestamp + '</span>'
         new_board.append '<span class="label type"><a href="https://trello.com/card/'+ board_id + '/' + card_id + '" target="_blank">' + type + '</a></span>'
         new_board.append '</p>'
-
-  new_board_container.append new_board
-  $('.boards').append new_board_container
+    new_board_container.append new_board
+    $('.boards').append new_board_container
+    $('.loading').hide()
+    console.timeEnd board.id
 
 loadBoards = -> 
   for bid in window.user.idBoards
@@ -43,6 +46,7 @@ onAuthorized = ->
     window.user = u
     # $('.user').html u.fullName
     loadBoards()
+
   , (e) -> 
     console.log 'error when authorize' + e
 
@@ -54,6 +58,8 @@ window.boards = []
 opt = 
   name: "iTrello"
   success: -> onAuthorized()
+
+console.time 't'
 
 if !Trello.authorized()
   return Trello.authorize(opt)
