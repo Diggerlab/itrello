@@ -1,0 +1,30 @@
+.board {
+	padding: 10px 10px;
+	-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fefefe;
+  line-height: 20px;
+}
+
+.board hr {
+  margin: 0;
+}
+
+.board .user {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.board .timestamp {
+  font-size: 10px;
+  font-weight: bold;
+  color: #777;
+  padding: 0 5px;
+}
+
+.board .type a{
+  color: #eee;
+}
