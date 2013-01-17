@@ -27,6 +27,7 @@ namespace:deploy do
         #add any tasks in here that you want to run after the project is deployed
         run "rm -rf #{release_path}.git"
         run "chmod -R 755 #{current_path}"
+        run "touch #{File.join(current_path,'tmp','restart.txt')}"
       end
     end
 
