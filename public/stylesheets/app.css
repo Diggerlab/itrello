@@ -46,3 +46,10 @@
   z-index: 100;
 
 }
+
+.new {
+  background: url('/images/dot.png') no-repeat center;
+  width: 8px;
+  margin-top: 5px;
+  padding-right: 10px;
+}
