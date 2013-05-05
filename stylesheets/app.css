@@ -1,0 +1,55 @@
+.board {
+	padding: 10px 10px;
+	-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fefefe;
+  line-height: 20px;
+}
+
+.board hr {
+  margin: 0;
+}
+
+.board .user {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.board .timestamp {
+  font-size: 10px;
+  font-weight: bold;
+  color: #777;
+  padding: 0 5px;
+}
+
+.board .type a{
+  color: #eee;
+}
+
+.topbar {
+  float:right;
+}
+
+.loading {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Tahoma, Arial;
+  padding: 5px 20px;
+  letter-spacing: 1px;
+  color: #FFF;
+  background-color: #2ba6cb;
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+
+}
+
+.new {
+  background: url('/images/dot.png') no-repeat center;
+  width: 8px;
+  margin-top: 5px;
+  padding-right: 10px;
+}
